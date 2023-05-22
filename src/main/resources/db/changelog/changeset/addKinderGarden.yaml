@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: mvalchev
+      changes:
+        - createTable:
+            tableName: kinder_garden
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: capacity_special_education_needs
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: capacity_chronic_decease
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: capacity_social_criteria
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: overall_capacity
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: google_maps_url
+                  type: varchar(100)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: notes
+                  type: varchar(1000)
+                  constraints:
+                    nullable: true

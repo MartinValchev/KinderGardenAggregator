@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/addKinderGarden.yaml
+  - include:
+      file: db/changelog/changeset/addKinderGardenApplicant.yaml
+  - include:
+      file: db/changelog/changeset/addKinderGardenApplication.yaml

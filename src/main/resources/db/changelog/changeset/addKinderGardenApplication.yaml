@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: mvalchev
+      changes:
+        - createTable:
+            tableName: kinder_garden_application
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: kinder_garden_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_application_to_garden
+                    references: kinder_garden(id)
+              - column:
+                  name: kinder_garden_applicant_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_application_to_applicant
+                    references: kinder_garden_applicant(id)
+              - column:
+                  name: points
+                  type: int
+                  constraints:
+                    nullable: false

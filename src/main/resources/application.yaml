@@ -6,10 +6,12 @@ spring:
     path: /h2
   # Datasource
   datasource:
-    url: jdbc:h2:file:~/kinder-garden-h2.db
+    url: jdbc:h2:file:D:/kinder-garden-h2.db
     username: sa
     password: password
     driver-class-name: org.h2.Driver
     jpa:
       hibernate:
         ddl-auto: update
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
